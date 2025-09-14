@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CSS & JS Animation Demo</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <h1>CSS & JavaScript Animation Demo</h1>
+
+  <!-- Part 1: CSS Transitions and Animations -->
+  <section>
+    <h2>Part 1: CSS Transitions & Animations</h2>
+    <button id="hoverBtn" class="btn">Hover me!</button>
+
+    <div class="pulse-box" id="pulseBox"></div>
+  </section>
+
+  <!-- Part 2: JavaScript Functions -->
+  <section>
+    <h2>Part 2: JavaScript Functions</h2>
+    <p>Animation duration calculated: <span id="durationOutput"></span> seconds</p>
+  </section>
+
+  <!-- Part 3: JS Triggers CSS Animations -->
+  <section>
+    <h2>Part 3: Trigger CSS Animations with JS</h2>
+    <button id="animateBtn" class="btn">Animate Box</button>
+    <button id="toggleModalBtn" class="btn">Toggle Modal</button>
+
+    <div class="anim-box" id="animBox"></div>
+
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <p>This is a modal window!</p>
+        <button id="closeModalBtn" class="btn">Close Modal</button>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

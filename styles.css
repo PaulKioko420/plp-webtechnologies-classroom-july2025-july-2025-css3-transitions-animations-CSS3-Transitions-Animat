@@ -1,0 +1,101 @@
+/* Basic styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 2rem;
+  background-color: #f0f0f0;
+  color: #222;
+}
+
+h1, h2 {
+  color: #333;
+}
+
+section {
+  margin-bottom: 3rem;
+}
+
+/* Buttons with smooth hover transition */
+.btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  margin-right: 1rem;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+/* Part 1: Pulse box with continuous keyframe animation */
+.pulse-box {
+  width: 100px;
+  height: 100px;
+  background-color: #ff5722;
+  border-radius: 10px;
+  margin-top: 1rem;
+  animation: pulse 3s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 5px #ff5722;
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #ff5722;
+  }
+}
+
+/* Part 3: Animated box */
+.anim-box {
+  width: 120px;
+  height: 120px;
+  background-color: #4caf50;
+  border-radius: 12px;
+  margin-top: 1rem;
+  transition: transform 0.5s ease;
+}
+
+/* Pulse animation triggered by JS */
+.anim-box.pulse {
+  animation: pulse 1s ease 2;
+}
+
+/* Modal styling */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  transform: translateY(-50px);
+  transition: transform 0.4s ease;
+}
+
+.modal.show .modal-content {
+  transform: translateY(0);
+}
